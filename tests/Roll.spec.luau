@@ -20,9 +20,12 @@ end)
 
 h.test("rng на границе 0.9999 не выходит за массив", function()
 	local items = { { id = "a", weight = 1 }, { id = "b", weight = 1 } }
-	h.eq(Roll.pick(items, function()
-		return 0.99999999
-	end).id, "b")
+	h.eq(
+		Roll.pick(items, function()
+			return 0.99999999
+		end).id,
+		"b"
+	)
 end)
 
 h.test("распределение совпадает с весами ±2% на 100k роллов", function()

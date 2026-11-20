@@ -16,13 +16,30 @@ end
 
 function harness.eq(actual: any, expected: any, msg: string?)
 	if actual ~= expected then
-		error(string.format("%s: ожидалось %s, получено %s", msg or "eq", tostring(expected), tostring(actual)), 2)
+		error(
+			string.format(
+				"%s: ожидалось %s, получено %s",
+				msg or "eq",
+				tostring(expected),
+				tostring(actual)
+			),
+			2
+		)
 	end
 end
 
 function harness.near(actual: number, expected: number, tolerance: number, msg: string?)
 	if math.abs(actual - expected) > tolerance then
-		error(string.format("%s: ожидалось %.3f ± %.3f, получено %.3f", msg or "near", expected, tolerance, actual), 2)
+		error(
+			string.format(
+				"%s: ожидалось %.3f ± %.3f, получено %.3f",
+				msg or "near",
+				expected,
+				tolerance,
+				actual
+			),
+			2
+		)
 	end
 end
 
