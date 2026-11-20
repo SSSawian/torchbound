@@ -1,0 +1,9 @@
+# Studio
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+# Tools
+/bin/
+.DS_Store
+Thumbs.db
