@@ -1,0 +1,5 @@
+std = "roblox"
+
+[lints]
+# Тесты запускаются через Lune, там свои глобалы
+unused_variable = "warn"
